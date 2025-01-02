@@ -34,13 +34,14 @@ def format_messages(messages):
     return formatted_messages
 
 
-st.write("# 欢迎使用智能医疗问诊助手 👋")
-st.write("## 您的角色是：患者 😷")
+st.write("### 欢迎使用智能医疗问诊助手 👋")
+st.write("#### 您的角色是：患者 😷")
 
-st.write("### 对话记录")
+st.write("#### 对话记录")
 
 with st.container(border=True):
     st.write(format_messages( messages= server_state["chat_messages"]))
     # st.write(server_state["chat_messages"])
-st.text_input("Message", key="message_input_p", on_change=on_message_input)
+# action area
+st.text_input("请输入消息", key="message_input_p", on_change=on_message_input)
 

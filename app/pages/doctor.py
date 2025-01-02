@@ -47,8 +47,8 @@ def format_messages(messages,enable_NER=False,enable_intent_detection=False):
     return formatted_messages
 
 # header
-st.write("# 欢迎使用智能医疗问诊助手 👋")
-st.write("## 您的角色是：医生 👨‍⚕️")
+st.write("### 欢迎使用智能医疗问诊助手 👋")
+st.write("#### 您的角色是：医生 👨‍⚕️")
 # settings
 st.write("#### 当前系统设置")
 scol1, scol2,scol3,scol4 = st.columns([1,1,1,1],gap="small", vertical_alignment="bottom")
@@ -63,13 +63,12 @@ with scol4:
 # chat history
 col1, col2 = st.columns([4,1],gap="small", vertical_alignment="bottom")
 with col1:
-    st.write("### 对话记录")
+    st.write("#### 对话记录")
 with col2:
     st.button("清空",key="clear_messages",on_click=lambda:server_state["chat_messages"].clear())
 
 with st.container(border=True):
     st.write(format_messages( messages= server_state["chat_messages"],enable_NER=enable_NER, enable_intent_detection=enable_intent_detection))
 # action area
-st.write("### 请输入您的回复")
-st.text_input("输入消息", key="message_input", on_change=on_message_input)
+st.text_input("请输入消息", key="message_input", on_change=on_message_input)
 
