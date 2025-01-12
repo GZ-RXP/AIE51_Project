@@ -1,0 +1,15 @@
+{
+  "IMCS-V2_train_conversation": {
+    "file_name": "IMCS-V2_train_conversation.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+}

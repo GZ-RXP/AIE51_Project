@@ -1,5 +1,7 @@
 import threading
 from services.ConversationService import ConversationService
+from services.ConversationAgent import ConversationAgent
+# from services.ConversationAgentV2 import get_agent_response,init_conversation
 from services.NerService import NerService
 from services.ReportGenService  import ReportGenService
 from services.IntentDetectService import IntentDetectService
@@ -19,6 +21,7 @@ class MessageController(object):
                     cls._instance = instance
                     cls._instance.ner_service = NerService()
                     cls._instance.conversation_service = ConversationService()
+                    cls._instance.conversation_agent = ConversationAgent()
                     cls._instance.report_gen_service = ReportGenService()
                     cls._instance.intent_detect_service = IntentDetectService()
                     cls._instance.normal_service = NormService()
@@ -31,12 +34,9 @@ class MessageController(object):
         return cls._instance
 
     def __init__(self):
-        print(f"Initialized with Message Controller")
-        # self.conversation_service = ConversationService()
-        # self.ner_service = NerService()
-        # self.report_gen_service = ReportGenService()
-        # self.intent_detect_service = IntentDetectService()
-        # self.normal_service = NormService()
+        super(MessageController, self).__init__()
+        print("Initialized with Message Controller")
+
 
     def handle_message(self, user_input,user_role,enable_NER=False,enable_norm=False,enable_intent_detection=False,enbale_AI_response=False):
         print("Processing message:",user_role,user_input)
@@ -51,7 +51,13 @@ class MessageController(object):
     
     def get_response(self, messages, enable_ai_response=False):
         if enable_ai_response:
-            return self.conversation_service.get_response(messages, enable_ai_response)
+            return self.conversation_agent.get_response(messages=messages, enable_ai_response=enable_ai_response)
         else:
             raise Exception("AI Response is disabled")
+        
+    def generate_report(self, messages, enable_report=False):
+        if enable_report:
+            return self.report_gen_service.generate_report(messages, enable_report)
+        else:
+            raise Exception("Report Generation is disabled")
 

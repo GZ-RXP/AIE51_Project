@@ -1,0 +1,14 @@
+{
+  "identity-med": {
+    "file_name": "identity-med.json"
+  },
+  "IMCS-V2_train_alpaca": {
+    "file_name": "IMCS-V2_train_alpaca.json",
+    "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "system": "system"
+     }
+  }
+}

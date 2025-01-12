@@ -3,7 +3,7 @@ from requests import request
 
 class IntentDetectService(BaseService):
     def __init__(self):
-        self.url = "http://direct.virtaicloud.com:26177/get_dialogue_label"
+        self.url = ""
     
 
 

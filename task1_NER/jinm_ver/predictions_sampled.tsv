@@ -1,0 +1,101 @@
+instruction	output	pred_output
+家里有康崔乐	O O O B-Drug I-Drug I-Drug	O O O B-Drug I-Drug I-Drug
+但是反反复复这样。所以很担心	O O O O O O O O O O O O O O	O O O O O O O O O O O O O O
+最好化验一下，查看是哪种腹泻	O O O O O O O O O O O O B-Symptom I-Symptom	O O O O O O O O O O O O B-Symptom I-Symptom
+注意孩子拉的很多的话，注意适当补液，如果拉的水不多，可以继续光母乳，预防脱水	O O O O O O O O O O O O O O O B-Operation I-Operation O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom	X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+要不要放冰箱喝剩下的奶	O O O O O O O O O O O	O O O O O O O O O O O
+头疼	B-Symptom I-Symptom	B-Symptom I-Symptom
+可以口服助消化的药物。	O O O O B-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category O	O O O O B-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category O
+三天前的暂时可以不用，蒙脱石散跟二联益生菌要继续吃	O O O O O O O O O O O B-Drug I-Drug I-Drug I-Drug O B-Drug I-Drug I-Drug I-Drug I-Drug O O O O	O O O O O O O O O O O B-Drug I-Drug I-Drug I-Drug O B-Drug I-Drug I-Drug I-Drug I-Drug O O O O
+注意观察体温变化	O O O O O O O O	O O O O O O O O
+好的,谢谢	O O O O O	O O O O O
+蒙脱石散醒脾养儿颗粒	B-Drug I-Drug I-Drug I-Drug B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug	B-Drug I-Drug I-Drug I-Drug B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug
+孩子舌苔发白，怎么回事啊	O O B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O	O O B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O
+有无流涕？清涕还是黄涕？	O O B-Symptom I-Symptom O B-Symptom I-Symptom O O B-Symptom I-Symptom O	O O B-Symptom I-Symptom O B-Symptom I-Symptom O O B-Symptom I-Symptom O
+利巴韦林有吗	B-Drug I-Drug I-Drug I-Drug O O	B-Drug I-Drug I-Drug I-Drug O O
+那怎么照射	O O O O O	X X X X X
+如果方便的话，也可以配合做雾化	O O O O O O O O O O O O O B-Operation I-Operation	O O O O O O O O O O O O O B-Operation I-Operation
+恩	O	O
+另外孩子如果吃母乳，孩子妈妈忌辛辣刺激，生冷食品	O O O O O O O O O O O O O O O O O O O O O O O O	X X X X X X X X X X X X X X X X X X X X X X X X
+咳嗽都哭了	B-Symptom I-Symptom O B-Symptom O	B-Symptom I-Symptom O B-Symptom O
+好的	O O	O O
+没有脓血	O O B-Symptom I-Symptom	O O B-Symptom I-Symptom
+目前您宝宝的体温需要药物降温，可以选择口服的布洛芬或者对乙酰氨基酚	O O O O O O O O O O O O O O O O O O O O O O B-Drug I-Drug I-Drug O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug	O O O O O O O O O O O O O O O O O O O O O O B-Drug I-Drug I-Drug O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug
+昨晚烧38.8吃了退热药，最高39	O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O B-Drug_Category I-Drug_Category I-Drug_Category O O O B-Symptom I-Symptom	X X X X X X X X X X X X X X X X X
+布洛芬每袋0.2克，我家宝宝10个月吃多少	B-Drug I-Drug I-Drug O O O O O O O O O O O O O O O O O O	B-Drug I-Drug I-Drug O O O O O O O O O O O O O O O O O O
+宝宝还有其他症状吗？	O O O O O O O O O O	O O O O O O O O O O
+是的	O O	O O
+哦	O	O
+另外如果反复腹泻，最好化验便常规除外肠道感染。	O O O O O O B-Symptom I-Symptom O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O B-Symptom I-Symptom I-Symptom I-Symptom O	O O O O O O B-Symptom I-Symptom O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O B-Symptom I-Symptom I-Symptom I-Symptom O
+可以的	O O O	O O O
+如果效果不好，怀疑乳糖不耐受，换用不含乳糖的奶粉	O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O	O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O
+嗯嗯	O O	O O
+考虑感染性腹泻的可能。需要再次检查大便常规	O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination	O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination
+今天还给喝了小儿双解止泻颗粒	O O O O O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug I-Drug I-Drug	O O O O O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug I-Drug I-Drug
+口唇干尿也少	B-Symptom I-Symptom I-Symptom B-Symptom I-Symptom I-Symptom	B-Symptom I-Symptom I-Symptom B-Symptom I-Symptom I-Symptom
+睡前喝了点牛奶，他可能不舒服，刚闹了	O O O O O O O O O O O O O O O O B-Symptom O	O O O O O O O O O O O O O O O O B-Symptom O
+所以说这个孩子的这些表现应该是正常的	O O O O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O
+憋的脸红，	O O O O O	X X X X X
+您好，我是您这次的咨询医生	O O O O O O O O O O O O O	O O O O O O O O O O O O O
+可以用我刚才讲的方法物理降温，也可以泡澡。	O O O O O O O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O O O O
+发烧吗？	B-Symptom I-Symptom O O	B-Symptom I-Symptom O O
+如果没有其他问题，那就结束了	O O O O O O O O O O O O O O	O O O O O O O O O O O O O O
+不客气	O O O	O O O
+好	O	O
+不客气的。	O O O O O	O O O O O
+别着急，可以打抗过敏药和消炎药观察	O O O O O O O B-Drug_Category I-Drug_Category I-Drug_Category I-Drug_Category O B-Drug_Category I-Drug_Category I-Drug_Category O O	X X X X X X X X X X X X X X X X X
+一次1/3袋，一天三次	O O O O O O O O O O O	O O O O O O O O O O O
+去上级医院检查？	O O O O O O O O	O O O O O O O O
+母乳	O O	O O
+都说输液危害大，尤其是婴幼儿，	O O B-Operation I-Operation O O O O O O O O O O O	O O B-Operation I-Operation O O O O O O O O O O O
+那可以试一试艾畅，对感冒症状还可以	O O O O O O B-Drug I-Drug O O B-Symptom I-Symptom O O O O O	O O O O O O B-Drug I-Drug O O B-Symptom I-Symptom O O O O O
+考虑传染的可能性非常大。	O O O O O O O O O O O O	O O O O O O O O O O O O
+这个一般不是太贵，当然有些时候医生可能会配合着给孩子输一些液，可能会导致费用贵一些。	O O O O O O O O O O O O O O O O O O O O O O O O O O B-Operation I-Operation I-Operation I-Operation O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O O O O O O O O O B-Operation I-Operation I-Operation I-Operation O O O O O O O O O O O O
+要注意体温情况，如果出现高热体温39度，就要吃美林退热药。	O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O B-Drug I-Drug B-Drug_Category I-Drug_Category I-Drug_Category O	X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+另外布诺分混悬液用美林就可以了	O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug O B-Drug I-Drug O O O O	O O B-Drug I-Drug I-Drug I-Drug I-Drug I-Drug O B-Drug I-Drug O O O O
+白天还是晚上厉害	O O O O O O O O	O O O O O O O O
+在吗？	O O O	O O O
+大便在肠腔内停留时间过长会有酸臭味道的，药物不吃的话，孩子就容易便秘脱肛。	O O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O O O O B-Symptom I-Symptom O O O	X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+今天他没吐，拉肚子也好很多了，就是还有流鼻涕跟咳嗽。	O O O O B-Symptom O B-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Symptom I-Symptom I-Symptom O B-Symptom I-Symptom O	O O O O B-Symptom O B-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Symptom I-Symptom I-Symptom O B-Symptom I-Symptom O
+以前推拿好久没生病啦近期总犯病	O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O
+还有其他问题吗？	O O O O O O O O	O O O O O O O O
+好的	O O	O O
+也就是说这个孩子现在口服药物比较困难	O O O O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O
+您好，我是您的辅诊医生，很高兴为您提供服务，解答问题。	O O O O O O O O O O O O O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O O O O O O O O O O
+如果单纯感冒症状，多1周左右会改善	O O O O B-Symptom I-Symptom O O O O O O O O O O O	O O O O B-Symptom I-Symptom O O O O O O O O O O O
+感觉鼻子不畅通	O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom	O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom
+好的，谢谢	O O O O O	O O O O O
+（空）	O O O	O O O
+医生说的这些都没有吃	O O O O O O O O O O	O O O O O O O O O O
+没有问医生	O O O O O	O O O O O
+好的，谢谢大夫	O O O O O O O	O O O O O O O
+病理性黄疸值听说升得很快的	B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O	X X X X X X X X X X X X X
+好吧，祝孩子早日康复！	O O O O O O O O O O O	O O O O O O O O O O O
+有点	O O	O O
+可是他刚才也大便了一次，软的，还是有血哦	O O O O O O O O O O O O O O O O O O O O	X X X X X X X X X X X X X X X X X X X X
+哦，知道了，谢谢	O O O O O O O O	O O O O O O O O
+您好。	O O O	O O O
+没有痰	O O B-Symptom	O O B-Symptom
+这个孩子发热一个周了，什么检查也没有做？	O O O O B-Symptom I-Symptom O O O O O O O O O O O O O O	O O O O B-Symptom I-Symptom O O O O O O O O O O O O O O
+（空）	O O O	O O O
+咳嗽是一个过程，宝贝上痰后咳嗽症状比较厉害，并不代表宝贝病情加重了，痰液刺激的！不用担心，多给宝贝后背	B-Symptom I-Symptom O O O O O O O O O B-Symptom O B-Symptom I-Symptom O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom O O O O O O O O O O O O O O O	X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+看不出有	O O O O	O O O O
+宝宝咳嗽有痰吗？	O O B-Symptom I-Symptom O B-Symptom O O	O O B-Symptom I-Symptom O B-Symptom O O
+这个基因检测，主要是查先天性疾病的，和亲子鉴定的基因诊断，是完全不同的，一般不会牵扯到亲子关系的，不用太担心。	O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O	X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+能放屁不，能喝水吗	O B-Symptom I-Symptom O O O O O O	O B-Symptom I-Symptom O O O O O O
+宝贝最近吃饭怎么样？有没有恶心呕吐情况？	O O O O O O O O O O O O O B-Symptom I-Symptom B-Symptom I-Symptom O O O	O O O O O O O O O O O O O B-Symptom I-Symptom B-Symptom I-Symptom O O O
+肛门塞可以吗	B-Operation I-Operation I-Operation O O O	X X X X X X
+美林吃完多长时间吃妈咪爱？	B-Drug I-Drug O O O O O O O B-Drug I-Drug I-Drug O	B-Drug I-Drug O O O O O O O B-Drug I-Drug I-Drug O
+哦	O	O
+吃奶都正常	O O O O O	O O O O O
+好的，那有没有比较好的物理降温方法？	O O O O O O O O O O O O O O O O O O	O O O O O O O O O O O O O O O O O O
+我看一下	O O O O	O O O O
+不用吃了	O O O O	O O O O
+好的，谢谢	O O O O O	O O O O O
+好的	O O	O O
+什么比较好？？	O O O O O O O	O O O O O O O
+如果没有感冒的话，那你完全可以不吃药，	O O O O B-Symptom I-Symptom O O O O O O O O O O O O O	O O O O B-Symptom I-Symptom O O O O O O O O O O O O O
+可能的原因，一慢性的支气管炎，二，过敏性咳嗽的可能。	O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O	X X X X X X X X X X X X X X X X X X X X X X X X X X
+可能效果要好一些。	O O O O O O O O O	O O O O O O O O O
+嗯嗯，这个奶粉的因素就不大了	O O O O O O O O O O O O O O	O O O O O O O O O O O O O O
+你好，在吗	O O O O O	O O O O O

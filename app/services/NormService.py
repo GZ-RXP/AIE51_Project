@@ -4,7 +4,7 @@ import json
 
 class NormService(BaseService):
     def __init__(self):
-        self.url = "http://direct.virtaicloud.com:48053/get_symptom"
+        self.url = ""
 
 
     def normalize(self, text, role, enable_norm=False):

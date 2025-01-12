@@ -26,15 +26,32 @@ def on_message_input():
 def format_messages(messages,enable_NER=False,enable_norm=False, enable_intent_detection=False):
     formatted_messages = ""
     for message in messages:
-        formatted_messages +=f"- {'医生' if message['role']=='assistant' else '患者'}: {message['sentence']}  \n"
+        role = '医生' if message['role']=='assistant' else '患者'
+        sentence = message['sentence'].replace('\n', '<BR>')
+        formatted_messages +=f"- {role}: {sentence}\n"
         if enable_NER:
-            formatted_messages +=f"  - NER   : {message['bio_labels']}  \n"
+            formatted_messages +=f"  - NER   : {message['bio_labels']}\n"
         if enable_norm:
-            formatted_messages +=f"  - norm  : {message['norm']}  \n"
+            formatted_messages +=f"  - norm  : {message['norm']}\n"
         if enable_intent_detection:
-            formatted_messages +=f"  - intent: {message['intent']}  \n"
+            formatted_messages +=f"  - intent: {message['intent']}\n"
     return formatted_messages
 
+
+def generate_report():
+    if(enable_report and len(server_state["chat_messages"])>0):
+        st.write("##### 报告生成中...")
+    else:
+        st.write("##### 没有对话内容，无法生成报告")
+
+    report = "【病历报告】\n"+message_controller.generate_report(server_state["chat_messages"], enable_report)
+
+    print(report)
+    new_message_packet = message_controller.handle_message(report,role,enable_NER=False,enable_norm=False, enable_intent_detection=False)
+    with server_state_lock["chat_messages"]:
+        server_state["chat_messages"] = server_state["chat_messages"] + [
+            new_message_packet
+        ]
 # header
 st.write("### 欢迎使用智能医疗问诊助手 👋")
 st.write("#### 您的角色是：医生 👨‍⚕️")
@@ -72,9 +89,9 @@ with col2:
     st.button("清空",key="clear_messages",on_click=lambda:server_state["chat_messages"].clear())
 with col3:
     if enable_report:
-        st.button("生成报告",key="generate_report",on_click=lambda:st.write("报告生成中..."))
+        st.button("生成报告",key="generate_report",on_click=generate_report)
 
-with st.container(border=True):
+with st.container(border=True,height=500):
     st.markdown(body=format_messages( messages= server_state["chat_messages"],enable_NER=enable_NER, enable_norm=enable_norm,enable_intent_detection=enable_intent_detection),unsafe_allow_html=True)
 # action area
 if enable_AI_response:

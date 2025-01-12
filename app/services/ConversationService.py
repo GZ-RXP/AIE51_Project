@@ -26,7 +26,7 @@ class ConversationService(BaseService):
                     top_p=0.3
                     )
         print("Conversation model initialized",conversation_model)
-        sys_prompt = SystemMessagePromptTemplate.from_template(template="""你是一个智能医疗诊断助手，请根据用户输入的症状描述，解答用户的问题或给出医学建议，推动对话直至得出医学诊断结论，如果信息不足，请要求用户提供必要的信息。""")
+        sys_prompt = SystemMessagePromptTemplate.from_template(template="""你是一个智能医疗诊断助手，请根据用户输入的症状描述，解答用户的问题或给出医学建议，推动对话直至得出医学诊断结论，如果信息不足，请要求用户提供必要的信息。对话已经提供的信息就不必反复询问""")
         prompt = ChatPromptTemplate.from_messages(messages=[
                 sys_prompt, 
                 MessagesPlaceholder(variable_name="messages")

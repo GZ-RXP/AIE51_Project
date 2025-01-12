@@ -38,7 +38,9 @@ def on_message_input():
 def format_messages(messages):
     formatted_messages = ""
     for message in messages:
-        formatted_messages +=f"- {'医生' if message['role']=='assistant' else '患者'}: {message['sentence']}  \n"
+        role = '医生' if message['role']=='assistant' else '患者'
+        sentence = message['sentence'].replace('\n', '<BR>')
+        formatted_messages +=f"- {role}: {sentence}\n"
     return formatted_messages
 
 
@@ -48,10 +50,12 @@ st.write("#### 您的角色是：患者 😷")
 st.write("#### 对话记录")
 
 with server_state_lock["chat_messages"]:
-    with st.container(border=True):
-        st.write(format_messages( messages= server_state["chat_messages"]))
+    with st.container(border=True,height=500):
+        st.write(format_messages( messages= server_state["chat_messages"]),unsafe_allow_html=True)
     # st.write(server_state["chat_messages"])
+
     # action area
+
     if len(server_state["chat_messages"])>0:
         st.text_input("请输入消息", key="message_input_p", on_change=on_message_input)
     else:
